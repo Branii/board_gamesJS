@@ -4,6 +4,7 @@ function Happy8WinOrLose(drawNumber) { // drawNumber is an array of 20 numbers
   
     //helper functions
     function ArraySum(array) { // array sum function
+<<<<<<< HEAD
       return array.reduce((accumulator, currentValue) => accumulator + parseInt(currentValue), 0);
     }
 
@@ -12,6 +13,13 @@ function Happy8WinOrLose(drawNumber) { // drawNumber is an array of 20 numbers
         if (type === 'odd') return nums.filter(num => num % 2 !== 0);
         if (type === 'even') return nums.filter(num => num % 2 === 0);
         return nums;
+=======
+      return array.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+    }
+
+    function arrayIntersection(array1, array2) { // array intersection function
+        return array1.filter(value => array2.includes(value));
+>>>>>>> aea9d167e33b62359e9fc75049a43f43c21539f4
     }
   
     let qualified = []
@@ -47,6 +55,7 @@ function Happy8WinOrLose(drawNumber) { // drawNumber is an array of 20 numbers
 
     //to be completed on monday
 
+<<<<<<< HEAD
     //Gold | Wood | Water | Fire | Earth
     const data = {
         gold: generateNumbers(210, 695, 'range'),
@@ -64,4 +73,9 @@ function Happy8WinOrLose(drawNumber) { // drawNumber is an array of 20 numbers
   }
 
   console.log(Happy8WinOrLose(['1','02','03','33','45','06','77','08','80','10','11','94','13','50','15','66','17','88','76','20']))
+=======
+    return qualified.length === 0 ? 'No Win' : qualified;
+  
+  }
+>>>>>>> aea9d167e33b62359e9fc75049a43f43c21539f4
   
