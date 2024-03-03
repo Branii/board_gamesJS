@@ -1,5 +1,5 @@
 
-function fast3WinOrLose(drawNumber) {
+function fast3WinOrLose(drawNumber) { // drawNumber is an array of 3 numbers from 1 to 6 [1,4,5]
   
   //helper functions
 
@@ -68,4 +68,4 @@ function fast3WinOrLose(drawNumber) {
 
 }
 
-console.log(fast3WinOrLose([6,6,6]));
+console.log(fast3WinOrLose([3,3,3]));
