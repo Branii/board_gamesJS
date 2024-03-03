@@ -12,8 +12,6 @@ function Happy8WinOrLose(drawNumber) { // drawNumber is an array of 20 numbers
         if (type === 'odd') return nums.filter(num => num % 2 !== 0);
         if (type === 'even') return nums.filter(num => num % 2 === 0);
         return nums;
-
-      return array.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
     }
 
     function arrayIntersection(array1, array2) { // array intersection function
