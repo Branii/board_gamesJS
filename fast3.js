@@ -33,6 +33,7 @@ function fast3WinOrLose(drawNumber) {
   data1.forEach((value, index) => {
     arrayIntersection(value, drawNumber).length === 2 ? qualified.push(value.join(',')) : null;
   });
+ 
   const data2 = [[4,4],[5,5],[6,6]]
   data2.forEach((value, index) => {
     arrayIntersection(value, drawNumber).length === 2 ? qualified.push(value.join(',')) : null;
@@ -45,8 +46,8 @@ function fast3WinOrLose(drawNumber) {
   });
 
   //any triple
-  const data4 = [[1,1,1],[2,2,2],[3,3,3],[4,4,4],[5,5,5],[6,6,6]]
-  data4.includes(drawNumber) ? qualified.push('combo') : null;
+  const data4 = [['1,1,1'],['2,2,2'],['3,3,3'],['4,4,4'],['5,5,5'],['6,6,6']]
+  data4.some(arr => arr.includes(drawNumber.join(','))) ? qualified.push('combo') : null;
 
   // 4-17
   generateNumbers(4, 17, 'range').includes(sumArray(drawNumber)) ? qualified.push(sumArray(drawNumber)) : null;
@@ -67,4 +68,4 @@ function fast3WinOrLose(drawNumber) {
 
 }
 
-console.log(fast3WinOrLose([1, 2, 3]));
+console.log(fast3WinOrLose([6,6,6]));
