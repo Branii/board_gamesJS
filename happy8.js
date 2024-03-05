@@ -49,7 +49,16 @@ function Happy8WinOrLose(drawNumber) { // drawNumber is an array of 20 numbers
     oddNumbers.length < evenNumbers.length ? qualified.push('Even') : null
     oddNumbers.length === evenNumbers.length ? qualified.push('Tie') : null
 
-    //to be completed on monday
+    //last but one digit
+    ArraySum(drawNumber) % 2 === 0 ? qualified.push('Pair') : null
+    ArraySum(drawNumber) % 2 !== 0 ? qualified.push('One') : null
+
+    ArraySum(drawNumber) > 810 && ArraySum(drawNumber) % 2 === 0 ? qualified.push('Big Even') : null
+    ArraySum(drawNumber) < 810 && ArraySum(drawNumber) % 2 === 0 ? qualified.push('Small Even') : null
+
+    ArraySum(drawNumber) > 810 && ArraySum(drawNumber) % 2 !== 0 ? qualified.push('Big Odd') : null
+    ArraySum(drawNumber) < 810 && ArraySum(drawNumber) % 2 !== 0 ? qualified.push('Small Odd') : null
+
 
     //Gold | Wood | Water | Fire | Earth
     const data = {
